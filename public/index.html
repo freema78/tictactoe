@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Amanda Freeman -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amanda Freeman's Multiplayer Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Two Player Tic-Tac-Toe</h1>
+        <p class="student-name">Created by Amanda Freeman</p>
+
+        <section class="join-area">
+            <input id="playerName" type="text" placeholder="Enter your name" maxlength="20">
+            <input id="gameCode" type="text" placeholder="Game code" maxlength="12">
+            <button id="joinButton">Join Game</button>
+        </section>
+
+        <p id="connectionStatus">Enter your name and a game code to join.</p>
+        <p id="playerStatus">Not connected</p>
+        <p id="turnStatus">Waiting for players...</p>
+        <p id="winnerStatus"></p>
+
+        <section id="board" class="board" aria-label="Tic-Tac-Toe board">
+            <button class="cell" data-index="0" aria-label="Top left"></button>
+            <button class="cell" data-index="1" aria-label="Top middle"></button>
+            <button class="cell" data-index="2" aria-label="Top right"></button>
+            <button class="cell" data-index="3" aria-label="Middle left"></button>
+            <button class="cell" data-index="4" aria-label="Center"></button>
+            <button class="cell" data-index="5" aria-label="Middle right"></button>
+            <button class="cell" data-index="6" aria-label="Bottom left"></button>
+            <button class="cell" data-index="7" aria-label="Bottom middle"></button>
+            <button class="cell" data-index="8" aria-label="Bottom right"></button>
+        </section>
+
+        <button id="resetButton" class="reset-button" disabled>Reset Game</button>
+    </main>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>
